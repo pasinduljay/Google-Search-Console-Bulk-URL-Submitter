@@ -70,6 +70,16 @@ public class programme {
             driver.findElement(By.xpath("//*[@id=\"yDmH0d\"]/div[6]/div/div[2]/div[3]/div[2]/span/span")).click();
             
             Thread.sleep(2300);
+
+                     // Check if the element identified by xpath6 is present
+            if (driver.findElements(By.xpath("//*[@id=\"yDmH0d\"]/div[6]/div/div[2]/div[3]/div/span")).size() > 0) 
+            {
+                driver.findElement(By.xpath("//*[@id=\"yDmH0d\"]/div[6]/div/div[2]/div[3]/div/span")).click();
+                Thread.sleep(500);
+                
+            } else {
+                System.out.println("Element identified by xpath6 not found. Skipping click.");
+              }
         }
 
         // Close the browser after processing all URLs
